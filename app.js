@@ -12,8 +12,8 @@ const { middlewareClient } = require('./middleware/client')
 const { generateImage, cleanNumber, checkEnvFile, createClient, isValidNumber } = require('./controllers/handle')
 const { connectionReady, connectionLost } = require('./controllers/connection')
 const { saveMedia } = require('./controllers/save')
-const { getMessages, responseMessages, bothResponse } = require('./controllers/flows')
-const { sendMedia, sendMessage, lastTrigger, sendMessageButton, readChat } = require('./controllers/send')
+const { getMessages, getGreet, responseMessages, bothResponse } = require('./controllers/flows')
+const { sendMedia, sendMessage, lastTrigger, sendMessageButton, readChat,sendGreet } = require('./controllers/send')
 const app = express();
 app.use(cors())
 app.use(express.json())
@@ -77,6 +77,15 @@ const listenMessage = () => client.on('message', async msg => {
         await sendMessage(client, from, response.replyMessage);
     }
 
+    //Saludo
+    greet = await getGreet(message);
+    if(greet){
+        message="M1";
+        steps = await getMessages(message)
+        response = await responseMessages(steps);
+        await sendGreet(client, from, response.replyMessage,null);
+        return
+    }
 
     /**
      * Respondemos al primero paso si encuentra palabras clave

@@ -6,6 +6,17 @@ const getMessages = async (message) => {
     return data
 }
 
+const getGreet = async(message)=>{
+    arr =['hola','buenos dias','buenos días',"buenas tardes"];
+    contains = arr.some(e=>{
+        data=null;
+        if(message.includes(e)){
+            data = "M1";
+        }
+        return data;
+    });
+    return contains;
+}
 
 const responseMessages = async (step) => {
     const data = await reply(step)
@@ -26,4 +37,4 @@ const bothResponse = async (message) => {
 }
 
 
-module.exports = { getMessages, responseMessages, bothResponse }
+module.exports = { getMessages,getGreet, responseMessages, bothResponse }

@@ -69,6 +69,20 @@ const sendMessage = async (client, number = null, text = null, trigger = null) =
 }
 
 /**
+ * Enviamos un mensaje simple (texto) a nuestro cliente
+ * @param {*} number 
+ */
+ const sendGreet = async (client, number = null, text = null, trigger = null) => {
+    setTimeout(async () => {
+     number = cleanNumber(number)
+     const message = text
+     client.sendMessage(number, message);
+     await readChat(number, message, trigger)
+     console.log(`⚡⚡⚡ Enviando mensajes....`);
+    },DELAY_TIME)
+ }
+
+/**
  * Enviamos un mensaje con buttons a nuestro cliente
  * @param {*} number 
  */
@@ -114,4 +128,4 @@ const readChat = async (number, message, trigger = null) => {
     console.log('Saved')
 }
 
-module.exports = { sendMessage, sendMedia, lastTrigger, sendMessageButton, readChat, sendMediaVoiceNote }
+module.exports = { sendGreet,sendMessage, sendMedia, lastTrigger, sendMessageButton, readChat, sendMediaVoiceNote }
