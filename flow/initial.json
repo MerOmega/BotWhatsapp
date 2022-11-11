@@ -1,0 +1,79 @@
+[
+    {
+        "keywords":  [
+            "p1",
+			"P1"
+        ],
+        "key": "PC01"
+    },
+	{
+        "keywords":  [
+            "p50",
+			"P50"
+        ],
+        "key": "PC50"
+    },
+	{
+        "keywords":  [
+            "p51",
+			"P51"
+        ],
+        "key": "PC51"
+    },
+	{
+        "keywords":  [
+            "p52",
+			"P52"
+        ],
+        "key": "PC52"
+    },
+	
+	
+	
+    {
+        "keywords":  [
+            "c1",
+			"C1"
+        ],
+        "key": "CEL01"
+    },
+	
+	
+	
+    {
+        "keywords":  [
+            "d1",
+			"D1"
+        ],
+        "key": "DATOS01"
+    },
+	
+	
+	
+    {
+        "keywords":  [
+            "m1",
+			"M1"
+        ],
+        "key": "MENU"
+    },
+	
+	
+	
+    {
+        "keywords":  [
+            "z1",
+			"Z1"
+        ],
+        "key": "OTROS01"
+    },
+	
+	
+    {
+        "keywords":  [
+            "x1",
+			"X1"
+        ],
+        "key": "OFERTA01"
+    }
+]

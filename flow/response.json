@@ -1,0 +1,115 @@
+{
+    "MENU":{
+        "replyMessage":[
+            "*Bienvenido al menu principal!* \n\n",
+            "Por favor, escribi el codigo correcto para continuar: (por ejemplo: Escribi D1) \n\n",
+            "*P1:* Servicio tecnico de PC/Portatiles/Redes/Programas \n",
+            "*C1:* Servicio tecnico de celulares y tablet \n",
+			"*D1:* Ubicacion y horarios \n",
+			"*X1:* Ofertas \n",
+			"*Z1:* Otras consultas \n"
+        ],
+        "media":null,
+        "trigger":null
+    },
+	
+	
+	
+	
+    "PC01":{
+        "replyMessage":[
+            "Elegiste la opcion *Servicio tecnico de PC/Portatiles/Redes/Programas*, encargado del area: *Cristian*. \n",
+            "Sobre que area es su problema? Escriba el codigo correcto \n\n",
+            "*P50:* Servicio tecnico de PC/Portatiles \n",
+            "*P51:* Servicio tecnico de Redes informaticas \n",
+            "*P52:* Servicio tecnico de Programas \n",
+			"*M1:* Para volver al menu principal \n"
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "PC50":{
+        "replyMessage":[
+            "Elegiste la opcion *Servicio tecnico de PC/Portatiles*. \n",
+            "Necesitamos que describas *POR ESCRITO Y CON LUJO DE DETALLES* los problemas que tiene tu equipo. \n",
+            "Si lo crees necesario, podes adjuntar imagenes y videos. \n",
+            "Luego de escribir, por favor, sea paciente y aguarde su respuesta, gracias! \n\n",
+			"Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "PC51":{
+        "replyMessage":[
+            "Elegiste la opcion *Servicio tecnico de Redes informaticas*. \n",
+            "Necesitamos que describas *POR ESCRITO Y CON LUJO DE DETALLES* los problemas que tenes en tu red y los equipos que tenes. Por ejemplo: dispongo de un router de mi propiedad y no me funciona la conectividad WiFi. \n",
+            "Si es para realizar configuraciones de equipos, necesitamos saber, SIN EXCEPCION, cuantos equipos hay que conectar y que equipos de red dispone (router, switch, repetidores, rack, etc) \n\n",
+            "Si es una instalacion de equipos, necesitamos que adjuntes un plano de lugar (puede ser un dibujo), donde se vean las paredes, escaleras y si son mas de 1 planta. \n\n",
+            "Luego de escribir, por favor, sea paciente y aguarde su respuesta, gracias! \n\n",
+			"Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":null,
+        "trigger":null
+    },
+    "PC52":{
+        "replyMessage":[
+            "Elegiste la opcion *Servicio tecnico de Programas*. \n",
+            "Te recordamos que en nuestra web podes ver todos los programas que tenemos, como asi su precio. Las descargas son digitales. \n",
+            "Nuestra web es https://vymax.com.ar \n",
+			"Si tu programa no se encuentra listado, podes escribirlo ahora por este medio y te responderemos a la brevedad. Gracias! \n\n",
+            "Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":null,
+        "trigger":null
+    },	
+	
+	
+    "CEL01":{
+        "replyMessage":[
+            "Elegiste la opcion *Servicio tecnico de celulares y tablet*, encargado del area: *Jeronimo*. \n",
+            "Necesitamos que describas *POR ESCRITO Y CON LUJO DE DETALLES* los problemas que tiene tu equipo. \n",
+            "Si lo crees necesario, podes adjuntar imagenes y videos. \n",
+            "Luego de escribir, por favor, sea paciente y aguarde su respuesta, gracias! \n\n",
+            "Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":null,
+        "trigger":null
+    },
+	
+	
+	
+	
+    "DATOS01":{
+        "replyMessage":[
+            "Estamos ubicados en calle 49 n958 entre diagonal 73 y 14, La Plata. \n",
+            "De Lunes a Viernes de 10 a 18hs \n\n",
+            "Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":null,
+        "trigger":null
+    },
+	
+	
+
+    "OTROS01":{
+        "replyMessage":[
+            "Elegiste la opcion *Otras consultas*. \n",
+            "Te pedimos que describas tu consulta lo mejor posible \n",
+            "Luego de escribir, por favor, sea paciente y aguarde su respuesta, gracias! \n\n",
+            "Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":null,
+        "trigger":null
+    },
+	
+	
+	
+    "OFERTA01":{
+        "replyMessage":[
+            "*Te enviamos las ofertas vigentes!* \n\n",
+            "Si necesitas volver al menu principal, escribi *M1*."
+        ],
+        "media":["1.jpg","2.jpg"],
+        "trigger":null
+    }
+}
