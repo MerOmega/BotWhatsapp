@@ -78,11 +78,11 @@ const listenMessage = () => client.on('message', async msg => {
     }
 
     //Saludo
-    greet = await getGreet(message);
+    let greet = await getGreet(message);
     if(greet){
-        message="M1";
-        steps = await getMessages(message)
-        response = await responseMessages(steps);
+        let message="M1";
+        let steps = await getMessages(message)
+        let response = await responseMessages(steps);
         await sendGreet(client, from, response.replyMessage,null);
         return
     }

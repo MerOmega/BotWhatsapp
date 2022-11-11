@@ -5,7 +5,7 @@ const fs = require('fs');
 const { MessageMedia, Buttons } = require('whatsapp-web.js');
 const { cleanNumber } = require('./handle')
 const DELAY_TIME = 170; //ms
-const DIR_MEDIA = `${__dirname}/../mediaSend`;
+const DIR_MEDIA = `${__dirname}/../mediaSend/promos/`;
 // import { Low, JSONFile } from 'lowdb'
 // import { join } from 'path'
 const { saveMessage } = require('../adapter')
@@ -16,18 +16,19 @@ const { saveMessage } = require('../adapter')
  */
 
 const sendMedia = (client, number = null, fileName = null) => {
+    const testFolder = './promos/';
     if(!client) return console.error("El objeto cliente no está definido.");
-    console.log(fileName);
     try {
-        fileName.forEach(e=>{
-            number = cleanNumber(number || 0)
-            const file = `${DIR_MEDIA}/${e}`;
-            if (fs.existsSync(file)) {
-                const media = MessageMedia.fromFilePath(file);
-                client.sendMessage(number, media, { sendAudioAsVoice: true });
-            }
-        })
-        
+        fs.readdir(DIR_MEDIA, (err, files) => {
+            files.forEach(e=>{
+                number = cleanNumber(number || 0)
+                const file = `${DIR_MEDIA}/${e}`;
+                if (fs.existsSync(file)) {
+                    const media = MessageMedia.fromFilePath(file);
+                    client.sendMessage(number, media, { sendAudioAsVoice: true });
+                }
+            })
+          });        
     } catch(e) {
         throw e;
     }
